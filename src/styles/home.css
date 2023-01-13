@@ -1,5 +1,252 @@
-.home{
-  height: 200vh;
-  background-color: #fff;
+#ab-opening-section{
   padding-top: 84px;
+}
+.ab-opening-container{
+  padding: 96px 24px 0;
+}
+
+.ab-title-group .pretitle{
+  font-size: 24px;
+  font-weight: 600;
+}
+.ab-title-group .title{
+  font-size: 32px;
+  font-weight: 600;
+  color: #5637FB;
+  margin: 0;
+}
+.ab-title-group .subtitle{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.ab-apply-button{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #5637FB;
+  border-radius: 16px;
+  gap: 4px;
+  width: 292px;
+  height: 60px;
+  transition: .2s;
+}
+
+.ab-apply-button:hover{
+  background-color: #2904f0;
+}
+
+.ab-apply-button img{
+  filter: invert(1);
+  margin-left: 10px;
+  height: 13px;
+  width: 7px;
+}
+
+.ab-btn-fixed-container{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.ab-apply-button-fixed{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #5637FB;
+  border-radius: 16px;
+  gap: 4px;
+  width: 300px;
+  height: 60px;
+  transition: .2s;
+}
+
+.ab-apply-button-fixed:hover{
+  background-color: #2904f0;
+}
+
+.ab-apply-button-fixed img{
+  filter: invert(1);
+  margin-left: 10px;
+  height: 13px;
+  width: 7px;
+}
+
+.ab-opening-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 435px;
+  height: 58px;
+  margin: 30px 0;
+}
+
+#opening-email-input{
+  border: none;
+  border-bottom: 1px solid #777777;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: #777777;
+  width: 100%;
+  height: 40px
+}
+
+#opening-email-input:focus-visible{
+  border: none;
+  border-bottom: 1px solid #111;
+  outline: none;
+}
+
+.opening-email-label{
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #777777;
+}
+.opening-email-label img{
+  width: 12px;
+  height: auto;
+  margin-right: 2px;
+}
+
+.imageInfo-container{
+  display: flex;
+  padding-bottom: 96px;
+}
+
+.ab-image{
+  width: 477px;
+  height: 420px;
+}
+
+.ab-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.ab-imageInfo-section .ab-title-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ab-imageInfo-section .ab-title-group .subtitle{
+  max-width: 340px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .ab-imageInfo-section .ab-title-group{
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 768px){
+  .ab-image-container{
+    flex: 50%;
+  }
+
+  .ab-imageInfo-section .ab-title-group{
+    flex: 50%;
+  }
+
+  .ab-btn-fixed-container{
+    display: none;
+  }
+
+  .ab-apply-button-fixed{
+    transform: translateY(150%);
+  }
+}
+
+@media (min-width: 1024px){
+  .ab-imageInfo-section .ab-title-group{
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 768px){
+  .imageInfo-container{
+    flex-direction: column;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  .ab-imageInfo-section .ab-title-group{
+    padding-top: 40px;
+  }
+
+  .ab-btn-fixed-container{
+    display: flex;
+  }
+}
+@media (min-width: 520px) and  (max-width: 768px){
+  .ab-imageInfo-section .ab-title-group{
+    width: 477px;
+    flex: 1;
+  }
+}
+@media (max-width: 520px) {
+  .ab-apply-button{
+    width: 100%;
+  }
+  .ab-opening-form{
+    width: 100%;
+  }
+  .ab-image{
+    width: 342px;
+    height: 302px;
+  }
+  .ab-image-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 345px) {
+  .ab-image{
+    width: 100%;
+  }
+  .ab-apply-button{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px){
+  .ab-btn-fixed-container{
+    width: 100vw;
+  }
+
+  .ab-apply-button-fixed{
+    width: 90%;
+  }
 }

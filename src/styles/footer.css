@@ -1,11 +1,16 @@
 .ab-footer{
     background-color: #EBEBEB;
     min-height: 352px;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
 }
 
 .ab-footer-container{
     display: flex;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .ab-footer-col h3{

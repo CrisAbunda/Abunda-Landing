@@ -1,0 +1,103 @@
+/*START - slider*/
+#infinite.ab-slider-section{
+	width:100%;
+    padding: 96px 0 5px;
+}
+#infinite2.ab-slider-section{
+	width:100%;
+    padding: 0 0 96px;
+}
+
+.ab-slider-container{
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    width: 500%;
+}
+
+.ab-slider{
+    width: 100%;
+    height:100%;
+    padding: 0;
+    display:flex;
+
+}
+
+.slider-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    height: 50px;
+    padding: 8px 0;
+    background: #EBEBEB;
+    mix-blend-mode: luminosity;
+    border-radius: 12px;
+    margin: 0 10px;
+}
+#infinite .slider-card img{
+    width: 100px;
+    height: 25px;
+    object-fit: contain;
+    opacity: .5;
+    filter: grayscale(1);
+}
+#infinite2 .slider-card img{
+    width: 125px;
+    height: 25px;
+    padding: 40px;
+    object-fit: contain;
+    opacity: .5;
+    filter: grayscale(1);
+}
+#infinite div.ab-slider-container::before{
+    content: " ";
+    position:absolute;
+    z-index:9;
+    width:180px;
+    height:100%;
+}
+#infinite div.ab-slider-container::after{
+    content: " ";
+    position:absolute;
+    z-index:9;
+    width:180px;
+    height:100%;
+}
+#infinite2 div.ab-slider-container::before{
+    content: " ";
+    position:absolute;
+    z-index:9;
+    width:180px;
+    height:100%;
+}
+#infinite2 div.ab-slider-container::after{
+    content: " ";
+    position:absolute;
+    z-index:9;
+    width:180px;
+    height:100%;
+}
+ul.ab-slider {
+    width:calc(180px * 24);
+}
+/*END - slider*/
+/*START - Slider 1 animation*/
+#infinite li.slider-card {
+    width:180px;
+    animation:translateinfinite 25s linear infinite;
+}
+
+/*END - Slider 1 animation*/
+
+/*START - slider 2 animation*/
+#infinite2 li.slider-card {
+    width:180px;
+    animation:translateinfinite 25s linear infinite;
+    animation-direction: reverse;
+}
+/*END - slider 2 animation*/
+/*slider animation*/
+@keyframes translateinfinite {
+	100% { transform:translateX(calc(-180px * 12));  }
+}

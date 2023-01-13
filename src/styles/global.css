@@ -17,17 +17,19 @@ body {
   color: rgba(0, 0, 0, 0.8);
   word-wrap: break-word;
   font-kerning: normal;
+  
 }
+
+
 
 #root{
   width: 100%;
 }
 
 .ab-container{
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
+  max-width: 1024px;
   padding-left: 24px;
   padding-right: 24px;
 }
