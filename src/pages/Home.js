@@ -70,20 +70,21 @@ const Home = () => {
   GetSliderImages1();
   GetSliderImages2();
 
+  document.addEventListener('scroll', (e) => {
+      let Yposition = window.scrollY;
+      let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
+      let applyButton = document.querySelector('.ab-apply-button-fixed');
+      if(Yposition > 400){
+        applyButtonContainer.style.visibility = "visible";
+        applyButton.style.transform = "translateY(0)";
+      }else{
+        applyButtonContainer.style.visibility = "hidden";
+        applyButton.style.transform = "translateY(150%)";
+      }
+  });
   useEffect(() =>{
     return () =>{
-        document.addEventListener('scroll', (e) => {
-            let Yposition = window.scrollY;
-            let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
-            let applyButton = document.querySelector('.ab-apply-button-fixed');
-            if(Yposition > 400){
-              applyButtonContainer.style.visibility = "visible";
-              applyButton.style.transform = "translateY(0)";
-            }else{
-              applyButtonContainer.style.visibility = "hidden";
-              applyButton.style.transform = "translateY(150%)";
-            }
-        });
+      console.log('Component Compiled');
     }
   });
   return (
