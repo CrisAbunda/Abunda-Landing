@@ -99,7 +99,7 @@ const Home = () => {
             </label>
             <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' required/>
           </form>
-          <a href="#" className='ab-apply-button'>
+          <a href="/" className='ab-apply-button'>
             Aplica a la lista de espera
             <img src={ArrowIcon} alt="Arrow Icon" />
           </a>
@@ -136,7 +136,7 @@ const Home = () => {
       </div>
     </section>
     <div className='ab-btn-fixed-container'>
-      <a href="#" className='ab-apply-button-fixed'>
+      <a href="/" className='ab-apply-button-fixed'>
         Aplica a la lista de espera
         <img src={ArrowIcon} alt="Arrow Icon" />
       </a>

@@ -29,10 +29,10 @@ const Header = () => {
                     <img src={logo} alt="Logo Abunda" className='logo-abunda'/>
                 </a>
                 <div className="ab-btn-container">
-                    <a href="#" className='ab-header-apply-button'>
+                    <a href="/" className='ab-header-apply-button'>
                             Aplica a la lista de espera
                     </a>
-                    <a href="#" className='ab-sidemenu-button'>
+                    <a href="/" className='ab-sidemenu-button'>
                         Menú
                         <img src={btnIcon} alt="Sidemenu Icon" className='ab-sidemenu-button-icon'/>
                     </a>

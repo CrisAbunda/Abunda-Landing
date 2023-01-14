@@ -7,9 +7,9 @@ const Footer = () => {
             <div className='ab-container ab-footer-container'>
                 <div className='ab-footer-col'>
                     <h3>Contacto</h3>
-                    <a href="#" className='ab-footer-link'>hola@abunda.com.co</a>
+                    <a href="/" className='ab-footer-link'>hola@abunda.com.co</a>
                     <h3>Contacto</h3>
-                    <a href="#" className='ab-footer-link'>hola@abunda.com.mx</a>
+                    <a href="/" className='ab-footer-link'>hola@abunda.com.mx</a>
                 </div>
                 <div className='ab-footer-col'>
                     <h3>Redes Sociales</h3>
