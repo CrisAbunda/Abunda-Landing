@@ -5,22 +5,6 @@
   padding: 96px 24px 0;
 }
 
-.ab-title-group .pretitle{
-  font-size: 24px;
-  font-weight: 600;
-}
-.ab-title-group .title{
-  font-size: 32px;
-  font-weight: 600;
-  color: #5637FB;
-  margin: 0;
-}
-.ab-title-group .subtitle{
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-}
-
 .ab-apply-button{
   font-weight: 600;
   font-size: 16px;

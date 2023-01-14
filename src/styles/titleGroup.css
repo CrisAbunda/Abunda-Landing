@@ -1,0 +1,42 @@
+.ab-title-group .pretitle{
+    font-size: 24px;
+    font-weight: 600;
+}
+.ab-title-group .title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #5637FB;
+    margin: 0;
+}
+.ab-title-group .subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ab-opening-text-container{
+    height: 120px;
+    width: 500px;
+    overflow: hidden;
+}
+.ab-title-container{
+    display: flex;
+    width: calc(500px * 3);
+    animation: slider 10s infinite;
+    position: relative;
+}
+.ab-title-container .ab-title-group{
+    width: 100%;
+}
+
+@keyframes slider {
+    0%{
+        right: 0;
+    }
+    50%{
+        right: 500px;
+    }
+    100%{
+        right: calc(500px * 2);
+    }
+}

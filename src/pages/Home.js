@@ -14,6 +14,7 @@ import Hov1 from '../assets/home/hov1.jpg';
 import Hov2 from '../assets/home/hov2.jpg';
 
 import Slider from '../components/Slider';
+import TitleGroup from '../components/TitleGroup';
 
 const Home = () => {
   const firstSliderImages = [];
@@ -89,11 +90,7 @@ const Home = () => {
     <>
     <section id='ab-opening-section' className=''>
       <div className='ab-container ab-opening-container'>
-        <div className="ab-title-group">
-          <div className="pretitle">Compara</div>
-          <h3 className='title'>Tarjetas de Crédito</h3>
-          <div className="subtitle">Verifica bancos y plataformas para invertir y endeudarte.</div>
-        </div>
+        <TitleGroup></TitleGroup>
         <div className='ab-button-container'>
           <form action="" className='ab-opening-form'>
             <label htmlFor="opening-email-input" className='opening-email-label'>

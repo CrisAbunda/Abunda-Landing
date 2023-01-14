@@ -12,10 +12,12 @@ const Header = () => {
             document.addEventListener('scroll', (e) => {
                 let Yposition = window.scrollY;
                 let applyButton = document.querySelector('.ab-header-apply-button');
-                if(Yposition > 500){
+                if(Yposition > 400){
                     applyButton.style.visibility = "visible";
+                    applyButton.style.transform = "translateX(0)";
                 }else{
                     applyButton.style.visibility = "hidden";
+                    applyButton.style.transform = "translateX(150%)";
                 }
             });
         }
