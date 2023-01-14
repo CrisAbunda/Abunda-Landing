@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import logo from '../assets/Logotype.png';
 import btnIcon from '../assets/icons/Icon.png'

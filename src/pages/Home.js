@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import '../styles/home.css';
 import ArrowIcon from '../assets/icons/Vector-4.png';
@@ -113,7 +113,7 @@ const Home = () => {
       <div className="ab-container imageInfo-container">
         <div className="ab-image-container">
           <div className="ab-image">
-            <img src={Hov1} alt="Balance Image" />
+            <img src={Hov1} alt="Balance" />
           </div>
         </div>
         <div className="ab-title-group">

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import '../styles/slider.css';
 
 const Slider = ({FirstSliderImages, SecondSliderImages}) => {
