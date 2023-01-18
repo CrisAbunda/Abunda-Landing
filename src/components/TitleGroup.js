@@ -4,36 +4,38 @@ import '../styles/titleGroup.css';
 const TitleGroup = () => {
     const titles = [
         {
-            pretitle: 'Compara',
+            key: 1,
             title: 'Tarjetas de Crédito',
-            subtitle: 'Verifica bancos y plataformas para invertir y endeudarte.',
         },
         {
-            pretitle: 'Pretitle',
-            title: 'Title',
-            subtitle: 'Subtitle',
+            key: 2,
+            title: 'Fondos de Inversión',
         },
         {
-            pretitle: 'Pretitle2',
-            title: 'Title2',
-            subtitle: 'Subtitle2',
+            key: 3,
+            title: 'Productos Financieros',
         },
     ];
+    let firstTitle = titles[0];
+    firstTitle.key = titles.length + 1;
+    titles.push(firstTitle);
     return (
         <>
-        <div className='ab-opening-text-container'>
-            <div className="ab-title-container">
-            {
-                titles.map(i => (
-                    titles.length > 0 && (
-                        <div className="ab-title-group">
-                            <div className="pretitle">{i.pretitle}</div>
-                            <h1 className='title'>{i.title}</h1>
-                            <div className="subtitle">{i.subtitle}</div>
+        <div className='ab-title-group-container'>
+            <div className="ab-title-group">
+                <h3 className="pretitle">Compara</h3>
+                    <div className="ab-titles-container">
+                        <div className="titles">
+                            {
+                                titles.map(i => (
+                                    titles.length > 0 && (
+                                        <h1 id={'title'+i.key} className='title'>{i.title}</h1>
+                                    )
+                                ))
+                            }
                         </div>
-                    )
-                ))
-            }
+                    </div>
+                <div className="subtitle">Verifica bancos y plataformas para invertir y endeudarte.</div>
             </div>
         </div>
         </>

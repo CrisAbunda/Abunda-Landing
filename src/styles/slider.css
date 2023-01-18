@@ -1,11 +1,11 @@
 /*START - slider*/
 #infinite.ab-slider-section{
 	width:100%;
-    padding: 96px 0 5px;
+    padding: 80px 0 5px;
 }
 #infinite2.ab-slider-section{
 	width:100%;
-    padding: 0 0 96px;
+    padding: 0 0 80px;
 }
 
 .ab-slider-container{
@@ -100,4 +100,15 @@ ul.ab-slider {
 /*slider animation*/
 @keyframes translateinfinite {
 	100% { transform:translateX(calc(-180px * 12));  }
+}
+
+@media (max-width: 768px) {
+    #infinite.ab-slider-section{
+        width:100%;
+        padding: 20px 0 5px;
+    }
+    #infinite2.ab-slider-section{
+        width:100%;
+        padding: 0 0 20px;
+    }
 }

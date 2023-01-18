@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../styles/home.css';
 import ArrowIcon from '../assets/icons/Vector-4.png';
@@ -15,8 +15,11 @@ import Hov2 from '../assets/home/hov2.jpg';
 
 import Slider from '../components/Slider';
 import TitleGroup from '../components/TitleGroup';
+import Form from '../components/Form';
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+
   const firstSliderImages = [];
   const secondSliderImages = [];
   const GetSliderImages1 = () =>{
@@ -89,6 +92,8 @@ const Home = () => {
   });
   return (
     <>
+    {open ? <Form closePopup={() => setOpen(false)} /> : null}
+    
     <section id='ab-opening-section' className=''>
       <div className='ab-container ab-opening-container'>
         <TitleGroup></TitleGroup>
@@ -100,7 +105,7 @@ const Home = () => {
             </label>
             <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' required/>
           </form>
-          <a href="/" className='ab-apply-button'>
+          <a className='ab-apply-button' onClick={() => setOpen(true)}>
             Aplica a la lista de espera
             <img src={ArrowIcon} alt="Arrow Icon" />
           </a>
@@ -119,7 +124,7 @@ const Home = () => {
         </div>
         <div className="ab-title-group">
           <div className="pretitle">Organiza</div>
-          <h3 className='title'>tu vida financiera</h3>
+          <h2 className='title'>tu vida financiera</h2>
           <div className="subtitle">Toma decisiones inteligentes y solicita productos financieros en línea.</div>
         </div>
       </div>
@@ -131,13 +136,13 @@ const Home = () => {
         </div>
         <div className="ab-title-group">
           <div className="pretitle">Mejora</div>
-          <h3 className='title'>tus tasas de interés</h3>
+          <h2 className='title'>tus tasas de interés</h2>
           <div className="subtitle">Unifica tu cartera y construye confiabilidad con una institución.</div>
         </div>
       </div>
     </section>
     <div className='ab-btn-fixed-container'>
-      <a href="/" className='ab-apply-button-fixed'>
+      <a className='ab-apply-button-fixed' onClick={() => setOpen(true)}>
         Aplica a la lista de espera
         <img src={ArrowIcon} alt="Arrow Icon" />
       </a>

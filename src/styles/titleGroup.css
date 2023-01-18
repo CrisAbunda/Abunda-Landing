@@ -1,6 +1,7 @@
 .ab-title-group .pretitle{
     font-size: 24px;
     font-weight: 600;
+    margin: 0;
 }
 .ab-title-group .title{
     font-size: 32px;
@@ -14,29 +15,83 @@
     margin: 0;
 }
 
-.ab-opening-text-container{
-    height: 120px;
-    width: 500px;
+.ab-titles-container{
+    height: 54px;
     overflow: hidden;
-}
-.ab-title-container{
-    display: flex;
-    width: calc(500px * 3);
-    animation: slider 10s infinite;
     position: relative;
-}
-.ab-title-container .ab-title-group{
-    width: 100%;
+    margin: 5px 0;
 }
 
+.titles{
+    animation: slider 6s infinite;
+}
+
+
 @keyframes slider {
-    0%{
-        right: 0;
+    0%, 100%{
+        transform: translate(0, 0);
     }
-    50%{
-        right: 500px;
+    33.33%{
+        transform: translate(0, calc(54 * -1px));
     }
-    100%{
-        right: calc(500px * 2);
+    66.66%{
+        transform: translate(0, calc(54 * -2px));
     }
+    99.99%{
+        transform: translate(0, calc(54 * -3px + 2px));
+    }
+}
+
+@media (max-width: 409px){
+    .ab-titles-container{
+        height: 36px;
+    }
+    .titles .title{
+        font-size: 24px;
+    }
+    .ab-title-group .pretitle{
+        font-size: 18px;
+    }
+    @keyframes slider {
+        0%, 100%{
+            transform: translate(0, 0);
+        }
+        33.33%{
+            transform: translate(0, calc(40 * -1px));
+        }
+        66.66%{
+            transform: translate(0, calc(40 * -2px));
+        }
+        99.99%{
+            transform: translate(0, calc(40 * -3px + 1px));
+        }
+    }    
+}
+@media (max-width: 318px){
+    .ab-titles-container{
+        height: 36px;
+    }
+    .titles .title{
+        font-size: 24px;
+    }
+    .ab-title-group .pretitle{
+        font-size: 18px;
+    }
+    @keyframes slider {
+        0%, 100%{
+            transform: translate(0, 0);
+        }
+        25%{
+            transform: translate(0, calc(40 * -1px));
+        }
+        50%{
+            transform: translate(0, calc(40 * -2px));
+        }
+        75%{
+            transform: translate(0, calc(40 * -3px));
+        }
+        99.99%{
+            transform: translate(0, calc(40 * -4px + 1px));
+        }
+    }    
 }

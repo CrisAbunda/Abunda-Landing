@@ -18,13 +18,14 @@
   background: #5637FB;
   border-radius: 16px;
   gap: 4px;
-  width: 292px;
+  width: 300px;
   height: 60px;
   transition: .2s;
 }
 
 .ab-apply-button:hover{
   background-color: #2904f0;
+  cursor: pointer;
 }
 
 .ab-apply-button img{
@@ -179,14 +180,19 @@
 }
 
 @media (max-width: 768px){
+  .ab-opening-container{
+    padding-top: 40px;
+  }
   .imageInfo-container{
     flex-direction: column;
     padding-bottom: 40px;
     align-items: center;
   }
-
+  .imageInfo-container:first-child{
+    padding-bottom: 20px;
+  }
   .ab-imageInfo-section .ab-title-group{
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .ab-btn-fixed-container{
@@ -222,6 +228,9 @@
   }
   .ab-apply-button{
     font-size: 14px;
+  }
+  .ab-title-group h2.title{
+    font-size: 25px;
   }
 }
 
