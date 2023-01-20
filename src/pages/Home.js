@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import '../styles/home.css';
 import ArrowIcon from '../assets/icons/Vector-4.png';
