@@ -37,12 +37,12 @@ const Header = () => {
                     <img src={logo} alt="Logo Abunda" className='logo-abunda'/>
                 </a>
                 <div className="ab-btn-container">
-                    <a className='ab-header-apply-button' onClick={() => {
+                    <button className='ab-header-apply-button' onClick={() => {
                         setOpen(true) 
                         document.getElementById('root').style.overflow = "hidden";
                     }}>
                             Aplica a la lista de espera
-                    </a>
+                    </button>
                     <a href="/" className='ab-sidemenu-button'>
                         Menú
                         <img src={btnIcon} alt="Sidemenu Icon" className='ab-sidemenu-button-icon'/>

@@ -105,10 +105,10 @@ const Home = () => {
             </label>
             <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' required/>
           </form>
-          <a className='ab-apply-button' onClick={() => setOpen(true)}>
+          <button className='ab-apply-button' onClick={() => setOpen(true)}>
             Aplica a la lista de espera
             <img src={ArrowIcon} alt="Arrow Icon" />
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -142,10 +142,10 @@ const Home = () => {
       </div>
     </section>
     <div className='ab-btn-fixed-container'>
-      <a className='ab-apply-button-fixed' onClick={() => setOpen(true)}>
+      <button className='ab-apply-button-fixed' onClick={() => setOpen(true)}>
         Aplica a la lista de espera
         <img src={ArrowIcon} alt="Arrow Icon" />
-      </a>
+      </button>
     </div>
     </>
   );

@@ -21,6 +21,7 @@
   width: 300px;
   height: 60px;
   transition: .2s;
+  border: none;
 }
 
 .ab-apply-button:hover{
@@ -62,6 +63,7 @@
   width: 300px;
   height: 60px;
   transition: .2s;
+  border: none;
 }
 
 .ab-apply-button-fixed:hover{
