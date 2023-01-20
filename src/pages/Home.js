@@ -78,10 +78,10 @@ const Home = () => {
       let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
       let applyButton = document.querySelector('.ab-apply-button-fixed');
       if(Yposition > 400){
-        applyButtonContainer.style.visibility = "visible";
+        applyButtonContainer.style.display = "flex";
         applyButton.style.transform = "translateY(0)";
       }else{
-        applyButtonContainer.style.visibility = "hidden";
+        applyButtonContainer.style.display = "none";
         applyButton.style.transform = "translateY(150%)";
       }
   });
