@@ -78,18 +78,14 @@ const Home = () => {
       let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
       let applyButton = document.querySelector('.ab-apply-button-fixed');
       if(Yposition > 400){
-        applyButtonContainer.style.display = "flex";
+        applyButtonContainer.style.visibility = "visible";
         applyButton.style.transform = "translateY(0)";
       }else{
-        applyButtonContainer.style.display = "none";
+        applyButtonContainer.style.visibility = "hidden";
         applyButton.style.transform = "translateY(150%)";
       }
   });
-  useEffect(() =>{
-    return () =>{
-      console.log('Component Compiled');
-    }
-  });
+  
   return (
     <>
     {open ? <Form closePopup={() => setOpen(false)} /> : null}

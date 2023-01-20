@@ -197,17 +197,6 @@
   background-position: 95% 10px;
 }
 
-.ab-btn-group:hover{
-  background: #5637FB;
-  color: #fff;
-  border: 1px solid #5637FB;
-  background-image: url('../assets/icons/Light Icon.png');
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position: 95% 10px;
-  cursor: pointer;
-}
-
 .ab-checkbox-input{
   position: absolute;
   z-index: -1;
@@ -273,4 +262,17 @@
   color: #fff;
   border: 1px solid #5637FB;
   cursor: pointer;
+}
+
+@media (min-width: 1024px){
+  .ab-btn-group:hover{
+    background: #5637FB;
+    color: #fff;
+    border: 1px solid #5637FB;
+    background-image: url('../assets/icons/Light Icon.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 95% 10px;
+    cursor: pointer;
+  }
 }

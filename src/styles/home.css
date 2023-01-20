@@ -45,13 +45,14 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  visibility: hidden;
 }
 
 .ab-apply-button-fixed{
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
