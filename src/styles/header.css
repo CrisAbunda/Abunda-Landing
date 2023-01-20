@@ -100,7 +100,8 @@
 }
 
 .ab-header-apply-button:hover{
-background-color: #2904f0;
+    background-color: #2904f0;
+    cursor: pointer;
 }
 
 .ab-header-apply-button img{
