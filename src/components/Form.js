@@ -77,7 +77,7 @@ const Form = ({closePopup}) => {
             checkValidity(firstInvalidField);
         }
 
-        if(form.correo.value == form.confirmarCorreo.value){
+        if(form.correo.value === form.confirmarCorreo.value){
             isValid = form.checkValidity();
             console.log('Email Igual');
             document.querySelector('.confirmEmail-error').style.display = 'none';
