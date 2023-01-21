@@ -1,7 +1,7 @@
 /*START - slider*/
 #infinite.ab-slider-section{
 	width:100%;
-    padding: 80px 0 5px;
+    padding: 50px 0;
 }
 #infinite2.ab-slider-section{
 	width:100%;
@@ -32,8 +32,6 @@
     padding: 8px 0;
     background: #EBEBEB;
     mix-blend-mode: luminosity;
-    border-radius: 12px;
-    margin: 0 10px;
 }
 #infinite .slider-card img{
     width: 100px;
@@ -85,7 +83,7 @@ ul.ab-slider {
 /*START - Slider 1 animation*/
 #infinite li.slider-card {
     width:180px;
-    animation:translateinfinite 25s linear infinite;
+    animation:translateinfinite 45s linear infinite;
 }
 
 /*END - Slider 1 animation*/
@@ -93,7 +91,7 @@ ul.ab-slider {
 /*START - slider 2 animation*/
 #infinite2 li.slider-card {
     width:180px;
-    animation:translateinfinite 25s linear infinite;
+    animation:translateinfinite 50s linear infinite;
     animation-direction: reverse;
 }
 /*END - slider 2 animation*/
@@ -105,7 +103,7 @@ ul.ab-slider {
 @media (max-width: 768px) {
     #infinite.ab-slider-section{
         width:100%;
-        padding: 20px 0 5px;
+        padding: 20px 0;
     }
     #infinite2.ab-slider-section{
         width:100%;

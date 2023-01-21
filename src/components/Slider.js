@@ -18,7 +18,7 @@ const Slider = ({FirstSliderImages, SecondSliderImages}) => {
                 </ul>
             </div>
         </div>
-        <div id="infinite2" className="ab-slider-section" >
+        {/* <div id="infinite2" className="ab-slider-section" >
             <div className='ab-slider-container'>
                 <ul className='ab-slider'>
                     {
@@ -32,7 +32,7 @@ const Slider = ({FirstSliderImages, SecondSliderImages}) => {
                     }
                 </ul>
             </div>
-        </div>
+        </div> */}
         </>
     );
 };
