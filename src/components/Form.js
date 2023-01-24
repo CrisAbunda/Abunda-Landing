@@ -1,6 +1,5 @@
 import React, {useState, useRef} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import axios from 'axios';
 import CloseIcon from '../assets/icons/Vector-3.png'
 import Logo from '../assets/Logotype.png';
 
@@ -93,78 +92,36 @@ const Form = ({closePopup}) => {
         if(isValid){
             document.querySelector('.submit-error').style.visibility = 'hidden';
             console.log(formDatab.entries());
-            // await fetch(
-            //     "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec",
-            //     {
-            //       method: "POST",
-            //       body: formDatab
-            //     }
-            //   )
-            //     .then((res) => res.json())
-            //     .then((data) => {
-            //       console.log(data);
-            //       toast("Wow so easy !");
-            //     })
-            //     .catch((error) => {
-            //         if(error.status == 200){
-            //             toast.success('Excelente! ', {
-            //                 position: "top-center",
-            //                 autoClose: 5000,
-            //                 hideProgressBar: true,
-            //                 closeOnClick: false,
-            //                 pauseOnHover: true,
-            //                 draggable: true,
-            //                 progress: undefined,
-            //                 theme: "light",
-            //             });
-            //         }else{
-            //             console.log(error);
-            //             toast("error");
-            //         }
-            //     }); 
-            axios.request({
-                method: "post", 
-                url: "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec", 
-                data: formDatab, 
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': '*',
-                    'Access-Control-Allow-Credentials': 'true'
-                },
-                onUploadProgress: p => {
-                  const progress = p.loaded / p.total;
-          
-                  // check if we already displayed a toast
-                  if (toastId.current === null) {
-                    toastId.current = toast('Upload in Progress', { progress });
-                  } else {
-                    toast.update(toastId.current, { progress });
-                  }
+            await fetch(
+                "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec",
+                {
+                  method: "POST",
+                  body: formDatab
                 }
-            })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                toast("Wow so easy !");
-            })
-            .catch((error) => {
-                if(error.status === 200){
-                    toast.success('Excelente! ', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: true,
-                        closeOnClick: false,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                    });
-                    toast.done(toastId.current);
-                }else{
-                    console.log(error);
-                    toast("error");
-                }
-            });     
+              )
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                  toast("Wow so easy !");
+                })
+                .catch((error) => {
+                    if(error.status == 200){
+                        toast.success('Excelente! ', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: true,
+                            closeOnClick: false,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                        });
+                    }else{
+                        console.log(error);
+                        toast("error");
+                    }
+                }); 
+            
         } else{
             document.querySelector('.submit-error').style.visibility = 'visible';
         }
