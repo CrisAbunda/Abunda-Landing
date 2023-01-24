@@ -1,10 +1,14 @@
-import {useState, React} from 'react';
+import React, {useState, useRef} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 import CloseIcon from '../assets/icons/Vector-3.png'
 import Logo from '../assets/Logotype.png';
 
 import '../styles/form.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = ({closePopup}) => {
+    const toastId = useRef(null);
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [checked3, setChecked3] = useState(false);
@@ -65,19 +69,19 @@ const Form = ({closePopup}) => {
         }
     }
 
-    const handleSubmit = e =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
-        const data = new FormData(e.currentTarget);
         const form = e.target;
+        const formEle = document.querySelector("form");
+        const formDatab = new FormData(formEle);
         let isValid;
-        // const isValid = form.checkValidity();
-
+ 
         const firstInvalidField = form.querySelector(":invalid");
         if(firstInvalidField){
             checkValidity(firstInvalidField);
         }
 
-        if(form.correo.value === form.confirmarCorreo.value){
+        if(form.Correo.value === form.confirmarCorreo.value){
             isValid = form.checkValidity();
             console.log('Email Igual');
             document.querySelector('.confirmEmail-error').style.display = 'none';
@@ -85,13 +89,82 @@ const Form = ({closePopup}) => {
             console.log('Email Diferente');
             document.querySelector('.confirmEmail-error').style.display = 'block';
         }
-        console.log(isValid);
 
         if(isValid){
             document.querySelector('.submit-error').style.visibility = 'hidden';
-            for (let [key, value] of data.entries()) {
-                console.log(key, value);
-            }
+            console.log(formDatab.entries());
+            // await fetch(
+            //     "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec",
+            //     {
+            //       method: "POST",
+            //       body: formDatab
+            //     }
+            //   )
+            //     .then((res) => res.json())
+            //     .then((data) => {
+            //       console.log(data);
+            //       toast("Wow so easy !");
+            //     })
+            //     .catch((error) => {
+            //         if(error.status = 200){
+            //             toast.success('Excelente! ', {
+            //                 position: "top-center",
+            //                 autoClose: 5000,
+            //                 hideProgressBar: true,
+            //                 closeOnClick: false,
+            //                 pauseOnHover: true,
+            //                 draggable: true,
+            //                 progress: undefined,
+            //                 theme: "light",
+            //             });
+            //         }else{
+            //             console.log(error);
+            //             toast("error");
+            //         }
+            //     }); 
+            axios.request({
+                method: "post", 
+                url: "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec", 
+                data: formDatab, 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': '*',
+                    'Access-Control-Allow-Credentials': 'true'
+                },
+                onUploadProgress: p => {
+                  const progress = p.loaded / p.total;
+          
+                  // check if we already displayed a toast
+                  if (toastId.current === null) {
+                    toastId.current = toast('Upload in Progress', { progress });
+                  } else {
+                    toast.update(toastId.current, { progress });
+                  }
+                }
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                toast("Wow so easy !");
+            })
+            .catch((error) => {
+                if(error.status = 200){
+                    toast.success('Excelente! ', {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    });
+                    toast.done(toastId.current);
+                }else{
+                    console.log(error);
+                    toast("error");
+                }
+            });     
         } else{
             document.querySelector('.submit-error').style.visibility = 'visible';
         }
@@ -104,6 +177,7 @@ const Form = ({closePopup}) => {
 
     return (
     <div className="ab-form-section">
+        <ToastContainer />
         <div className="ab-form-container" id='form'>
             <div className="ab-form-header">
                 <img src={Logo} alt="Logo" className='ab-form-logo' />
@@ -120,7 +194,7 @@ const Form = ({closePopup}) => {
                     <label htmlFor="email-input" className='ab-form-label'>
                         Correo
                     </label>
-                    <input type="email" placeholder='Tu correo electrónico' className='ab-form-input' id='email-input'  name="correo" required/>
+                    <input type="email" placeholder='Tu correo electrónico' className='ab-form-input' id='email-input'  name="Correo" required />
                 </div>
                 <div className="ab-input-group">
                     <label htmlFor="confirm-email-input" className='ab-form-label'>
@@ -133,41 +207,41 @@ const Form = ({closePopup}) => {
                     <label htmlFor="names-input" className='ab-form-label'>
                         Nombres
                     </label>
-                    <input type="text" placeholder='Tus Nombres' className='ab-form-input' id='names-input' name='nombres' required/>
+                    <input type="text" placeholder='Tus Nombres' className='ab-form-input' id='names-input' name='Nombres' required/>
                 </div>
                 <div className="ab-input-group">
                     <label htmlFor="lastname-input" className='ab-form-label'>
                         Primer Apellido
                     </label>
-                    <input type="text" placeholder='Tu apellido' className='ab-form-input' id='lastname-input' name='primerApellido' required/>
+                    <input type="text" placeholder='Tu apellido' className='ab-form-input' id='lastname-input' name='Apellido1' required/>
                 </div>
                 <div className="ab-input-group">
                     <label htmlFor="seclastname-input" className='ab-form-label'>
                         Segundo apellido (opcional)
                     </label>
-                    <input type="text" placeholder='Tus apellidos' className='ab-form-input' id='seclastname-input' name='segundoApellido'/>
+                    <input type="text" placeholder='Tus apellidos' className='ab-form-input' id='seclastname-input' name='Apellido2' />
                 </div>
                 <div className="ab-input-group">
                     <label htmlFor="phone-input" className='ab-form-label'>
                         Celular
                     </label>
-                    <input type="number" placeholder='1234567890' className='ab-form-input' id='phone-input' name='celular' required/>
+                    <input type="number" placeholder='1234567890' className='ab-form-input' id='phone-input' name='Celular' required/>
                 </div>
                 <p className='ab-form-subtitle'>¿Qué productos te gustaría comparar?</p>
                 <button className="ab-btn-group" id='ab-form-btn-1' onClick={handleCheck}>
-                    <input type="checkbox" value='Créditos de libre inversión' name='Créditos de libre inversión' className="ab-checkbox-input"/>
+                    <input type="checkbox" value='Créditos de libre inversión' name='Credito1' className="ab-checkbox-input"/>
                     Créditos de libre inversión
                 </button>
                 <button className="ab-btn-group" id='ab-form-btn-2' onClick={handleCheck}>
-                    <input type="checkbox"  value='Criptomonedas' name='Criptomonedas' className="ab-checkbox-input"/>
+                    <input type="checkbox"  value='Criptomonedas' name='Criptomoneda' className="ab-checkbox-input"/>
                     Criptomonedas
                 </button>
                 <button className="ab-btn-group" id='ab-form-btn-3' onClick={handleCheck}>
-                    <input type="checkbox" value='Créditos para vehículo' name='Créditos para vehículo' className="ab-checkbox-input"/>
+                    <input type="checkbox" value='Créditos para vehículo' name='Credito2' className="ab-checkbox-input"/>
                     Créditos para vehículo
                 </button>
                 <button className="ab-btn-group" id='ab-form-btn-4' onClick={handleCheck}>
-                    <input type="checkbox" value='Tarjetas de crédit' name='Tarjetas de crédito' className="ab-checkbox-input"/>
+                    <input type="checkbox" value='Tarjetas de crédit' name='Tarjetas' className="ab-checkbox-input"/>
                     Tarjetas de crédito
                 </button>
                 <button className="ab-btn-group" id='ab-form-btn-5' onClick={handleCheck}>
@@ -178,7 +252,7 @@ const Form = ({closePopup}) => {
                     <label htmlFor="otro-input" className='ab-form-label'>
                         ¿Qué producto te gustaría comparar?
                     </label>
-                    <input type="text" placeholder='Escribe que te gustaría comparar' className='ab-form-input' id='otro-input' name='otro' disabled/>
+                    <input type="text" placeholder='Escribe que te gustaría comparar' className='ab-form-input' id='otro-input' name='Otro' disabled/>
                 </div>
                 <span className='ab-error-message submit-error'>Algunos campos no estan llenos, por favor verifícalos.</span>
                 <input type="submit" value="Enviar" className='ab-form-submitBtn'/>
