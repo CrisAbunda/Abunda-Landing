@@ -104,7 +104,9 @@ const Form = ({closePopup}) => {
                   toast("Wow so easy !");
                 })
                 .catch((error) => {
-                    console.log(error.status);
+                    console.log(error);
+                    console.log(error.name);
+                    console.log(error.cause);
                     if(error.status === 200){
                         toast.success('Excelente! Hemos recibido tus datos. \n Te agradecemos y comparte:)', {
                             position: "top-center",
