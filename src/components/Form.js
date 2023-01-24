@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import CloseIcon from '../assets/icons/Vector-3.png'
 import Logo from '../assets/Logotype.png';
@@ -105,7 +105,7 @@ const Form = ({closePopup}) => {
                 })
                 .catch((error) => {
                     if(error.status === 200){
-                        toast.success('Excelente! ', {
+                        toast.success('Excelente! Hemos recibido tus datos. \n Te agradecemos y comparte:)', {
                             position: "top-center",
                             autoClose: 5000,
                             hideProgressBar: true,
