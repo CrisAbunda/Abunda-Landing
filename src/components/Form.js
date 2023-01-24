@@ -148,7 +148,7 @@ const Form = ({closePopup}) => {
                 toast("Wow so easy !");
             })
             .catch((error) => {
-                if(error.status == 200){
+                if(error.status === 200){
                     toast.success('Excelente! ', {
                         position: "top-center",
                         autoClose: 5000,
