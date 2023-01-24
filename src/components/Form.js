@@ -104,10 +104,7 @@ const Form = ({closePopup}) => {
                   toast("Wow so easy !");
                 })
                 .catch((error) => {
-                    console.log(error);
-                    console.log(error.name);
-                    console.log(error.cause);
-                    if(error.status === 200){
+                    if(error.name === 'SyntaxError'){
                         toast.success('Excelente! Hemos recibido tus datos. \n Te agradecemos y comparte:)', {
                             position: "top-center",
                             autoClose: 5000,
