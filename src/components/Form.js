@@ -7,7 +7,6 @@ import '../styles/form.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = ({closePopup}) => {
-    const toastId = useRef(null);
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [checked3, setChecked3] = useState(false);
@@ -105,7 +104,7 @@ const Form = ({closePopup}) => {
                   toast("Wow so easy !");
                 })
                 .catch((error) => {
-                    if(error.status == 200){
+                    if(error.status === 200){
                         toast.success('Excelente! ', {
                             position: "top-center",
                             autoClose: 5000,
