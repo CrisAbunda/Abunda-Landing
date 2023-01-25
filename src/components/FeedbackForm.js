@@ -7,7 +7,6 @@ const FeedbackForm = ({name, email}) => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const form = e.target;
         const formEle = document.querySelector("form");
         const formDatab = new FormData(formEle);
         
