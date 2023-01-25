@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import FeedbackForm from './FeedbackForm';
 import { ToastContainer, toast } from 'react-toastify';
 import CloseIcon from '../assets/icons/Vector-3.png'
 import Logo from '../assets/Logotype.png';
@@ -7,6 +8,9 @@ import '../styles/form.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = ({closePopup}) => {
+    const [open, setOpen] = useState(false);
+    const [clientName, setClientName] = useState('');
+    const [clientEmail, setClientEmail] = useState('');
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [checked3, setChecked3] = useState(false);
@@ -90,7 +94,8 @@ const Form = ({closePopup}) => {
 
         if(isValid){
             document.querySelector('.submit-error').style.visibility = 'hidden';
-            console.log(formDatab.entries());
+            setClientName(formDatab.get('Nombres'));
+            setClientEmail(formDatab.get('Correo'));
             await fetch(
                 "https://script.google.com/macros/s/AKfycbzL3js_NWspAJbw3vnlA1Q2Tp5WPt6wHfzCh2FhPxvu7m_SKGkJ_i0mJmg-SNHNXYbk/exec",
                 {
@@ -101,20 +106,11 @@ const Form = ({closePopup}) => {
                 .then((res) => res.json())
                 .then((data) => {
                   console.log(data);
-                  toast("Wow so easy !");
+                  toast("Datos recibidos!");
                 })
                 .catch((error) => {
                     if(error.name === 'SyntaxError'){
-                        toast.success('Excelente! Hemos recibido tus datos. \n Te agradecemos y comparte:)', {
-                            position: "top-center",
-                            autoClose: 5000,
-                            hideProgressBar: true,
-                            closeOnClick: false,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "light",
-                        });
+                        setOpen(true);
                     }else{
                         console.log(error);
                         toast("error");
@@ -134,6 +130,7 @@ const Form = ({closePopup}) => {
     return (
     <div className="ab-form-section">
         <ToastContainer />
+        {open ? <FeedbackForm name={clientName} email={clientEmail} /> : null}
         <div className="ab-form-container" id='form'>
             <div className="ab-form-header">
                 <img src={Logo} alt="Logo" className='ab-form-logo' />

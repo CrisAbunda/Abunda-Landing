@@ -1,0 +1,196 @@
+/* Popup style */
+.ab-feedback-section {
+    position: fixed;
+    background: #00000050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.ab-feedback-container::-webkit-scrollbar {
+    display: none;
+}
+
+.ab-feedback-container {
+    position: relative;
+    width: 600px;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #fff;
+    padding: 30px;
+    border-left: 1px solid #CECECE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background: #fff;
+    border: 1px solid #CECECE;
+    border-radius: 20px;
+}
+
+.ab-feedback-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.ab-feedback-logo{
+    width: 126px;
+    height: 33px;
+    object-fit: contain;
+}
+
+.ab-feedback-titles{
+    margin-bottom: 20px;
+}
+  
+.ab-feedback-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin: 25px 0 20px
+}
+  
+.ab-feedback-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.feedback-form{
+    width: 100%;
+}
+
+#feedback{
+    resize: none;
+    width: calc(100% - 22px);
+    height: 200px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Poppins;
+    padding: 10px;
+    border-color: #CECECE;
+}
+
+#feedback:focus-visible{
+    outline: 1px solid #000;
+}
+
+.bottom-container{
+    width: 100%;
+    display: flex;
+    padding: 15px 0 0;
+    justify-content: center
+}
+
+.ab-feedback-submit,
+.ab-feedback-cancel{
+    padding: 16px 24px;
+    height: 60px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    transition: .3s;
+}
+
+.ab-feedback-submit:hover,
+.ab-feedback-cancel:hover{
+    cursor: pointer;
+}
+
+.ab-feedback-submit{
+    background: #5637FB;
+    color: #fff;
+    border: 1px solid #5637FB;
+    cursor: pointer;
+}
+
+.ab-feedback-submit:hover{
+    background: #2904f0;
+    border: 1px solid #2904f0;
+}
+
+.ab-feedback-cancel{
+    background: #CECECE;
+    border: 1px solid #CECECE;
+}
+
+.ab-feedback-cancel:hover{
+    background: #c0c0c0;
+    border: 1px solid #c0c0c0;
+}
+
+.ab-feedback-label{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #777777;
+}
+
+.ab-feedback-error{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #d82c24;
+    visibility: hidden;
+}
+  
+
+@media (min-width: 650px){
+    .ab-feedback-submit{
+        width: 250px; 
+        margin: 0 10px   
+    }
+
+    .ab-feedback-cancel{
+        width: 250px;  
+        margin: 0 10px  
+    }
+}
+
+@media (max-width: 650px){
+    .ab-feedback-container{
+        height: 100vh;
+        justify-content: center;
+    }
+    .bottom-container{
+        flex-direction: column;
+    }
+
+    .ab-feedback-submit{
+        width: 100%;    
+        margin: 0 0 30px;  
+    }
+    
+    .ab-feedback-cancel{
+        width: 100%;    
+        margin: 0 0 15px;  
+    }
+}
+
+@media (max-height: 765px) and (max-width: 650px){
+    .ab-feedback-container{
+        height: 100vh;
+        justify-content: initial;
+    }
+}
