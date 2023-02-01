@@ -43,7 +43,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
 }
 
 .ab-footer-contact{
@@ -150,6 +150,9 @@
     }
     .ab-footer-socials{
         padding: 30px 0 100px;
+    }
+    .ab-footer-privacy-info{
+        padding: 0 0 100px;
     }
     .ab-footer-contact-cell{
         margin-bottom: 30px;

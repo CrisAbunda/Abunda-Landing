@@ -19,6 +19,7 @@ import Form from '../components/Form';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [email, setEmail] = useState('');
 
   const firstSliderImages = [];
   const secondSliderImages = [];
@@ -73,23 +74,33 @@ const Home = () => {
   GetSliderImages1();
   GetSliderImages2();
 
+  const handleEmailChange = (e) =>{
+    setEmail(e.target.value);
+  }
+
   document.addEventListener('scroll', (e) => {
       let Yposition = window.scrollY;
       let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
       let applyButton = document.querySelector('.ab-apply-button-fixed');
+      let headerApplyButton = document.querySelector('.ab-header-apply-button');
       if(Yposition > 400){
         applyButtonContainer.style.visibility = "visible";
         applyButton.style.transform = "translateY(0)";
+        headerApplyButton.style.visibility = "visible";
+        headerApplyButton.style.transform = "translateX(0)";
       }else{
         applyButtonContainer.style.visibility = "hidden";
         applyButton.style.transform = "translateY(150%)";
+        headerApplyButton.style.visibility = "hidden";
+        headerApplyButton.style.transform = "translateX(150%)";
       }
   });
-  
   return (
     <>
-    {open ? <Form closePopup={() => setOpen(false)} /> : null}
-    
+    {open ? <Form closePopup={() => setOpen(false)} email={email}/> : null}
+    <button className='ab-header-apply-button' onClick={() => {setOpen(true)}}>
+        Aplica a la lista de espera
+    </button>
     <section id='ab-opening-section' className=''>
       <div className='ab-container ab-opening-container'>
         <TitleGroup></TitleGroup>
@@ -99,7 +110,7 @@ const Home = () => {
               <img src={Sparkles} alt="Sparkles" />
               Sé el primero en probarlo
             </label>
-            <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' required/>
+            <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' onChange={handleEmailChange}/>
           </form>
           <button className='ab-apply-button' onClick={() => setOpen(true)}>
             Aplica a la lista de espera

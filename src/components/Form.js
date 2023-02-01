@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import FeedbackForm from './FeedbackForm';
 import { ToastContainer, toast } from 'react-toastify';
 import CloseIcon from '../assets/icons/Vector-3.png'
@@ -7,7 +7,7 @@ import Logo from '../assets/Logotype.png';
 import '../styles/form.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = ({closePopup}) => {
+const Form = ({closePopup, email}) => {
     const [open, setOpen] = useState(false);
     const [clientName, setClientName] = useState('');
     const [clientEmail, setClientEmail] = useState('');
@@ -40,15 +40,20 @@ const Form = ({closePopup}) => {
                 break;
             case 'ab-form-btn-5':
                 setChecked5(current => !current);
+                let inputGroup = document.querySelector('.ab-otro-input-group');
                 let input = document.getElementById('otro-input');
                 if(!checked5){
                     element.classList.remove('ab-btn-input');
                     element.classList.add('btn-checked');
+                    inputGroup.style.height = "auto";
+                    inputGroup.style.display = "block";
                     input.disabled = false;
                     input.required = true;
                 }else{
                     element.classList.add('ab-btn-input');
                     element.classList.remove('btn-checked');
+                    inputGroup.style.height = "0";
+                    inputGroup.style.display = "none";
                     input.disabled = true;
                     input.required = false;
                     input.value = '';
@@ -127,6 +132,14 @@ const Form = ({closePopup}) => {
         input.classList.remove('ab-form-input');
     }
 
+    useEffect(() => {
+        let emailInput = document.querySelector('#email-input') ;
+        if(email !== ''){
+            emailInput.value = email;
+            emailInput.style.opacity = '1';
+        }
+    });
+
     return (
     <div className="ab-form-section">
         <ToastContainer />
@@ -201,7 +214,7 @@ const Form = ({closePopup}) => {
                     {/* <input type="checkbox" value='Otro' name='Otro' className="ab-checkbox-input"/> */}
                     Otro
                 </button>
-                <div className="ab-input-group">
+                <div className="ab-input-group ab-otro-input-group">
                     <label htmlFor="otro-input" className='ab-form-label'>
                         ¿Qué producto te gustaría comparar?
                     </label>
@@ -214,5 +227,4 @@ const Form = ({closePopup}) => {
     </div>
     );
 };
-
 export default Form;
