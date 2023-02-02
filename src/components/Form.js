@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import FeedbackForm from './FeedbackForm';
 import { ToastContainer, toast } from 'react-toastify';
-import CloseIcon from '../assets/icons/Vector-3.png'
+import CloseIcon from '../assets/icons/Vector-3.png';
 import Logo from '../assets/Logotype.png';
 
 import '../styles/form.css';

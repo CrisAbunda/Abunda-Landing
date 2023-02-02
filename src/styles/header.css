@@ -70,6 +70,10 @@
     object-position: left;
 }
 
+.ab-sidemenu-button:hover{
+    cursor: pointer;
+}
+
 .ab-sidemenu-button .ab-sidemenu-button-icon{
     margin-left: 5px;
 }
