@@ -25,7 +25,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    
 }
 
 .ab-header-logo {
@@ -43,26 +42,24 @@
 }
 
 .ab-sidemenu-button{
-    padding: 1px 5px;
-    width: 98px;
-    height: 40px;
-    background: #EBEBEB;
-    border: 1px solid #CECECE;
-    border-radius: 64px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    color: #000;
-    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
+    border: none;
+    padding: 28px 13px;
+    background-color: transparent;
+    color: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    z-index: 915;
+    margin-left: 15px;
+    opacity: 1;
 }
 
 .ab-header-logo .logo-abunda{
@@ -75,8 +72,55 @@
 }
 
 .ab-sidemenu-button .ab-sidemenu-button-icon{
-    margin-left: 5px;
+    width: 40%;
+    height: auto;
+    padding: 5px;
 }
+
+.hamburger__bars {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: currentColor;
+    -webkit-transition: 0.2s -webkit-transform ease;
+    transition: 0.2s transform ease;
+}
+
+.hamburger__bars:after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(7px);
+    transition: 0.2s transform ease;
+}
+
+.hamburger__bars:before {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-7px);
+    transition: 0.2s transform ease;
+}
+
+.ab-sidemenu-button:hover .hamburger__bars:after{
+    transform: translateY(5px);
+}
+
+.ab-sidemenu-button:hover .hamburger__bars:before{
+    transform: translateY(-5px);
+}
+
 .ab-btn-container{
     display: flex;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import '../styles/home.css';
-import ArrowIcon from '../assets/icons/Vector-4.png';
+import ArrowIcon from '../assets/icons/svgs/Arrow-Right.svg';
 import Sparkles from '../assets/icons/sparkles.png';
 import Rappi from '../assets/Slider/Rappi.png';
 import Tyba from '../assets/Slider/tyba.png';

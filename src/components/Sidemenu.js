@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/sidemenu.css';
 
-import logo from '../assets/Logotype.png';
+import logo from '../assets/icons/svgs/Logotype.svg';
 import CloseIcon from '../assets/icons/Vector-3.png'
 
 const Sidemenu = () => {

@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import Sidemenu from './Sidemenu';
 
-import logo from '../assets/Logotype.png';
-import btnIcon from '../assets/icons/Icon.png'
+import logo from '../assets/icons/svgs/Logotype.svg';
 
 import '../styles/header.css';
 
@@ -29,8 +28,7 @@ const Header = () => {
                 </a>
                 <div className="ab-btn-container">
                     <button className='ab-sidemenu-button' onClick={handleOpenSidemenu}>
-                        Menú
-                        <img src={btnIcon} alt="Sidemenu Icon" className='ab-sidemenu-button-icon'/>
+                        <span class="hamburger__bars"></span>
                     </button>
                 </div>
             </div>
