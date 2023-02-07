@@ -71,10 +71,9 @@
 }
 
 .ab-apply-button-fixed img{
-  filter: invert(1);
   margin-left: 10px;
-  height: 13px;
-  width: 7px;
+  width: 20px;
+  height: auto;
 }
 
 .ab-opening-form{
