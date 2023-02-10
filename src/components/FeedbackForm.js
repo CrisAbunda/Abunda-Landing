@@ -18,7 +18,7 @@ const FeedbackForm = ({name, email}) => {
             document.querySelector('.ab-feedback-error').style.visibility = 'visible';
         }else{
             await fetch(
-                "https://script.google.com/macros/s/AKfycbyC-MwcF5g4NOxK9jMEyvkupWNJWtu4rS0cbm_4yViAgLhw2LsBcC4jXGdrZ0IrATOo/exec",
+                "https://script.google.com/macros/s/AKfycbwCeJgVgtdYrRSDkoZVzKYUiFl3bKJa52DOJF0OzXnL1_tFjo1Z_qJBL9wGLdSe6bFtmQ/exec",
                 {
                   method: "POST",
                   body: formDatab

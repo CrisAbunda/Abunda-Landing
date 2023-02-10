@@ -17,7 +17,10 @@ body {
   color: rgba(0, 0, 0, 0.8);
   word-wrap: break-word;
   font-kerning: normal;
-  
+}
+
+a, button{
+  font-family: 'Poppins', sans-serif;
 }
 
 
