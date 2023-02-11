@@ -1,6 +1,6 @@
 .ab-footer{
     background-color: #EBEBEB;
-    min-height: 352px;
+    min-height: 220px;
     position: relative;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -11,7 +11,7 @@
 .ab-footer-container{
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     position: relative;
 }
 
@@ -43,7 +43,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none;
+    display: flex;
+    align-items: end;
 }
 
 .ab-footer-contact{
@@ -60,11 +61,15 @@
 
 .ab-footer-bottom-row .ab-footer-row{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 }
 
 .ab-footer-socials li:not(:last-child) {
     padding-right: 14px;
+}
+.ab-footer-socials li{
+    width: 45px;
+    height: 45px;
 }
 
 .ab-footer-socials .ab-footer-link{
@@ -133,7 +138,7 @@
 
 @media (max-width: 1024px){
     .ab-footer{
-        min-height: 352px;;
+        min-height: 250px;
     }
     .ab-footer-container{
         flex-direction: column;
@@ -149,7 +154,7 @@
         align-items: center;
     }
     .ab-footer-socials{
-        padding: 30px 0 100px;
+        padding: 30px 0 80px;
     }
     .ab-footer-privacy-info{
         padding: 0 0 100px;

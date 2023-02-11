@@ -24,12 +24,12 @@ const Sidemenu = () => {
                     </span>
                 </div>
                 <div className="ab-sidemenu-content">
-                    <h4 className='ab-sidemenu-link'>Colombia</h4>
-                    <h4 className='ab-sidemenu-link'>Mexico</h4>
+                    {/* <h4 className='ab-sidemenu-link'>Colombia</h4>
+                    <h4 className='ab-sidemenu-link'>Mexico</h4> */}
                 </div>
                 <div className="ab-sidemenu-footer">
                     <h4 className='ab-sidemenu-footer-title'>Contacto</h4>
-                    <span className='ab-sidemenu-footer-link'>hola@abunda.com.co</span>
+                    <a href='mailto:cris@abunda.com.co' className='ab-sidemenu-footer-link'>cris@abunda.com.co</a>
                 </div>
             </div>
         </div>

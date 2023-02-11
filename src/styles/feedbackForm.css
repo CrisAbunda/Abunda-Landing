@@ -194,3 +194,8 @@
         justify-content: initial;
     }
 }
+@media (max-width: 768px){
+    .ab-feedback-section .bottom-container{
+      margin-bottom: 50px;
+    }
+  }

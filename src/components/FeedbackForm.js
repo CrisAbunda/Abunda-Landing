@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/feedbackForm.css';
-import Logo from '../assets/Logotype.png';
+import Logo from '../assets/icons/svgs/Logotype.svg';
 
 const FeedbackForm = ({name, email}) => {
     const [feedbackValue, setFeedbackValue] = useState('');
@@ -36,7 +36,7 @@ const FeedbackForm = ({name, email}) => {
                         console.log(error);
                         alert("error");
                     }
-                }); 
+                });
         }
     }
 
@@ -63,7 +63,7 @@ const FeedbackForm = ({name, email}) => {
                     }/>
                     <span className='ab-feedback-error'>El campo esta vacío, asegurate de escribir algo.</span>
                     <div className="bottom-container">
-                        <button className='ab-feedback-cancel' onClick={refreshPage}>Mejor en otra ocasión</button>
+                        <span className='ab-feedback-cancel' onClick={refreshPage}>Mejor en otra ocasión</span>
                         <input type='submit' value='Enviar' className='ab-feedback-submit'/>
                         <span></span>
                     </div>

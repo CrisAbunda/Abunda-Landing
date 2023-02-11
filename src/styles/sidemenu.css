@@ -58,6 +58,7 @@
     font-weight: 600;
     border-bottom: 1px solid rgba(86, 55, 251, .4);
     transition: .3s;
+    text-decoration: none;
 }
 
 .ab-sidemenu-footer-link:hover{
