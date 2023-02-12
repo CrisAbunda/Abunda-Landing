@@ -5,15 +5,23 @@ const TitleGroup = () => {
     const titles = [
         {
             key: 1,
-            title: 'Tarjetas de Crédito',
+            title: 'CDTs',
         },
         {
             key: 2,
-            title: 'Fondos de Inversión',
+            title: 'Tarjetas de crédito',
         },
         {
             key: 3,
-            title: 'Productos Financieros',
+            title: 'Préstamos Personales',
+        },
+        {
+            key: 4,
+            title: 'Bancos',
+        },
+        {
+            key: 5,
+            title: 'Plataformas',
         },
     ];
     let firstTitle = titles[0];

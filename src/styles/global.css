@@ -1,7 +1,6 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-y: visible;
   overflow-x: hidden;
 }
 
@@ -17,6 +16,11 @@ body {
   color: rgba(0, 0, 0, 0.8);
   word-wrap: break-word;
   font-kerning: normal;
+}
+
+.disable-scroll{
+  overflow-y: hidden;
+  position: fixed;
 }
 
 a, button{

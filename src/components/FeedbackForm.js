@@ -63,7 +63,7 @@ const FeedbackForm = ({name, email}) => {
                     }/>
                     <span className='ab-feedback-error'>El campo esta vacío, asegurate de escribir algo.</span>
                     <div className="bottom-container">
-                        <span className='ab-feedback-cancel' onClick={refreshPage}>Mejor en otra ocasión</span>
+                        <div className='ab-feedback-cancel' onClick={refreshPage}><span>Mejor en otra ocasión</span></div>
                         <input type='submit' value='Enviar' className='ab-feedback-submit'/>
                         <span></span>
                     </div>

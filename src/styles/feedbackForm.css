@@ -97,7 +97,6 @@
 
 .ab-feedback-submit,
 .ab-feedback-cancel{
-    padding: 16px 24px;
     height: 60px;
     border-radius: 16px;
     font-weight: 600;
@@ -127,6 +126,9 @@
 .ab-feedback-cancel{
     background: #CECECE;
     border: 1px solid #CECECE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ab-feedback-cancel:hover{
@@ -184,6 +186,8 @@
     
     .ab-feedback-cancel{
         width: 100%;    
+        height: 60px;
+        padding: 0;
         margin: 0 0 15px;  
     }
 }

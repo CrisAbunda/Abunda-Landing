@@ -78,6 +78,16 @@ const Home = () => {
     setEmail(e.target.value);
   }
 
+  const handleOpenForm = e => {
+    setOpen(true);
+    document.querySelector('#root').classList.add('disable-scroll');
+  }
+
+  const handleCloseForm = e => {
+    setOpen(false);
+    document.querySelector('#root').classList.remove('disable-scroll');
+  }
+
   document.addEventListener('scroll', (e) => {
       let Yposition = window.scrollY;
       let applyButtonContainer = document.querySelector('.ab-btn-fixed-container');
@@ -97,8 +107,8 @@ const Home = () => {
   });
   return (
     <>
-    {open ? <Form closePopup={() => setOpen(false)} email={email}/> : null}
-    <button className='ab-header-apply-button' onClick={() => {setOpen(true)}}>
+    {open ? <Form closePopup={handleCloseForm} email={email}/> : null}
+    <button className='ab-header-apply-button' onClick={handleOpenForm}>
         Aplica a la lista de espera
     </button>
     <section id='ab-opening-section' className=''>
@@ -112,7 +122,7 @@ const Home = () => {
             </label>
             <input type="email" placeholder='Tu correo electrónico' id='opening-email-input' onChange={handleEmailChange}/>
           </form>
-          <button className='ab-apply-button' onClick={() => setOpen(true)}>
+          <button className='ab-apply-button' onClick={handleOpenForm}>
             Aplica a la lista de espera
             <img src={ArrowIcon} alt="Arrow Icon" />
           </button>
@@ -149,7 +159,7 @@ const Home = () => {
       </div>
     </section>
     <div className='ab-btn-fixed-container'>
-      <button className='ab-apply-button-fixed' onClick={() => setOpen(true)}>
+      <button className='ab-apply-button-fixed' onClick={handleOpenForm}>
         Aplica a la lista de espera
         <img src={ArrowIcon} alt="Arrow Icon" />
       </button>
