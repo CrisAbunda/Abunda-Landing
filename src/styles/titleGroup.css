@@ -31,14 +31,20 @@
     0%, 100%{
         transform: translate(0, 0);
     }
-    33.33%{
-        transform: translate(0, calc(54 * -1px));
+    19.99%{
+        transform: translate(0, calc(53 * -1px));
     }
-    66.66%{
-        transform: translate(0, calc(54 * -2px));
+    39.99%{
+        transform: translate(0, calc(53 * -2px));
+    }
+    59.99%{
+        transform: translate(0, calc(53 * -3px));
+    }
+    79.99%{
+        transform: translate(0, calc(53 * -4px));
     }
     99.99%{
-        transform: translate(0, calc(54 * -3px + 2px));
+        transform: translate(0, calc(53 * -5px + 1px));
     }
 }
 
@@ -56,23 +62,29 @@
         0%, 100%{
             transform: translate(0, 0);
         }
-        33.33%{
+        19.99%{
             transform: translate(0, calc(40 * -1px));
         }
-        66.66%{
+        39.99%{
             transform: translate(0, calc(40 * -2px));
         }
-        99.99%{
-            transform: translate(0, calc(40 * -3px + 1px));
+        59.99%{
+            transform: translate(0, calc(40 * -3px));
         }
-    }    
+        79.99%{
+            transform: translate(0, calc(40 * -4px));
+        }
+        99.99%{
+            transform: translate(0, calc(40 * -5px + 1px));
+        }
+    }
 }
 @media (max-width: 318px){
     .ab-titles-container{
         height: 36px;
     }
     .titles .title{
-        font-size: 24px;
+        font-size: 19px;
     }
     .ab-title-group .pretitle{
         font-size: 18px;
@@ -81,17 +93,20 @@
         0%, 100%{
             transform: translate(0, 0);
         }
-        25%{
-            transform: translate(0, calc(40 * -1px));
+        19.99%{
+            transform: translate(0, calc(32 * -1px));
         }
-        50%{
-            transform: translate(0, calc(40 * -2px));
+        39.99%{
+            transform: translate(0, calc(32 * -2px));
         }
-        75%{
-            transform: translate(0, calc(40 * -3px));
+        59.99%{
+            transform: translate(0, calc(32 * -3px));
+        }
+        79.99%{
+            transform: translate(0, calc(32 * -4px));
         }
         99.99%{
-            transform: translate(0, calc(40 * -4px + 1px));
+            transform: translate(0, calc(32 * -5px + 4px));
         }
-    }    
+    }
 }

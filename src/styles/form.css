@@ -233,6 +233,23 @@
   display: none;
 }
 
+.email-error{
+  text-align: left;
+  display: none;
+}
+
+#email-input:not(:placeholder-shown):not(:focus):not(:valid) + .email-error{
+  display: block;
+}
+
+#email-input:not(:placeholder-shown):not(:focus):not(:valid){
+  border-bottom: 1px solid #d82c24;
+}
+
+#email-input:valid + span + .ab-confirm-icon{
+  display: block;
+}
+
 .submit-error{
   text-align: left;
   visibility: hidden;
