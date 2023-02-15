@@ -28,7 +28,7 @@ const Header = () => {
                 </a>
                 <div className="ab-btn-container">
                     <button className='ab-sidemenu-button' onClick={handleOpenSidemenu}>
-                        <span class="hamburger__bars"></span>
+                        <span className="hamburger__bars"></span>
                     </button>
                 </div>
             </div>

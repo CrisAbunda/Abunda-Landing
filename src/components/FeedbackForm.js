@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../styles/feedbackForm.css';
 import Logo from '../assets/icons/svgs/Logotype.svg';
 
-const FeedbackForm = ({name, email}) => {
+const FeedbackForm = ({name, email, client}) => {
     const [feedbackValue, setFeedbackValue] = useState('');
 
     const handleSubmit = async e => {
@@ -50,7 +50,7 @@ const FeedbackForm = ({name, email}) => {
                 <div className="ab-feedback-header">
                     <img src={Logo} alt="Logo" className='ab-feedback-logo' />
                     <div className="ab-feedback-titles">
-                        <h2 className='ab-feedback-title'>¡Muchas Gracias! Tus Datos Fueron Enviados</h2>
+                        <h2 className='ab-feedback-title'>¡Muchas Gracias! Eres el #{client} en dejarnos tus datos</h2>
                         <p className='ab-feedback-subtitle'>Tu opinión es importante para nosotros. Dejanos saber si hay algo que podamos hacer para mejorar tu experiencia en nuestra página.🚀</p>
                     </div>
                 </div>

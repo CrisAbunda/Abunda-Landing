@@ -3,6 +3,8 @@ import '../styles/sidemenu.css';
 
 import logo from '../assets/icons/svgs/Logotype.svg';
 import CloseIcon from '../assets/icons/Vector-3.png'
+import insta from '../assets/icons/Instagram.png';
+import tiktok from '../assets/icons/TikTok.png';
 
 const Sidemenu = () => {
 
@@ -28,8 +30,18 @@ const Sidemenu = () => {
                     <h4 className='ab-sidemenu-link'>Mexico</h4> */}
                 </div>
                 <div className="ab-sidemenu-footer">
-                    <h4 className='ab-sidemenu-footer-title'>Contacto</h4>
-                    <a href='mailto:cris@abunda.com.co' className='ab-sidemenu-footer-link'>cris@abunda.com.co</a>
+                <ul className='ab-footer-socials'>
+                        <li>
+                            <a href="https://www.instagram.com/abunda.colombia/" className='ab-footer-link' target="_blank" rel="noreferrer">
+                                <img src={insta} alt="Instagram" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@abunda.colombia" className='ab-footer-link' target="_blank" rel="noreferrer">
+                                <img src={tiktok} alt="Tik Tok" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

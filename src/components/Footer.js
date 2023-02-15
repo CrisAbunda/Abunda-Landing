@@ -12,10 +12,10 @@ const Footer = () => {
                     <img src={logo} alt="Abunda Icon" />
                 </div>
                 <div className='ab-footer-row ab-footer-contact'>
-                    <div className="ab-footer-contact-cell">
+                    {/* <div className="ab-footer-contact-cell">
                         <h3>Contacto</h3>
                         <a href="mailto:cris@abunda.com.co" className='ab-footer-contact-link'>cris@abunda.com.co</a>
-                    </div>
+                    </div> */}
                     <ul className='ab-footer-socials'>
                         <li>
                             <a href="https://www.instagram.com/abunda.colombia/" className='ab-footer-link' target="_blank" rel="noreferrer">

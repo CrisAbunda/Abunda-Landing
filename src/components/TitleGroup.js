@@ -9,7 +9,7 @@ const TitleGroup = () => {
         },
         {
             key: 2,
-            title: 'Tarjetas de crédito',
+            title: 'Tarjetas de Crédito',
         },
         {
             key: 3,

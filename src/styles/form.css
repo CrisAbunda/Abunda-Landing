@@ -327,20 +327,21 @@
   width: 100%;
   padding: 16px 24px;
   height: 60px;
-  background: #CECECE;
+  background: #5637FB;
   border-radius: 16px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  border: 1px solid #CECECE;
+  border: 1px solid #5637FB;
   transition: .3s;
+  color: #fff;
 }
 
 .ab-form-submitBtn:hover{
-  background: #5637FB;
+  background: #2904f0;
   color: #fff;
-  border: 1px solid #5637FB;
+  border: 1px solid #2904f0;
   cursor: pointer;
 }
 
