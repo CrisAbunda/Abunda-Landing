@@ -30,6 +30,7 @@ const Sidemenu = () => {
                     <h4 className='ab-sidemenu-link'>Mexico</h4> */}
                 </div>
                 <div className="ab-sidemenu-footer">
+                <h3 className='title'>Escríbenos</h3>
                 <ul className='ab-footer-socials'>
                         <li>
                             <a href="https://www.instagram.com/abunda.colombia/" className='ab-footer-link' target="_blank" rel="noreferrer">

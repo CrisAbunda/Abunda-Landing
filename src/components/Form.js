@@ -84,6 +84,7 @@ const Form = ({closePopup, email}) => {
         const formEle = document.querySelector("form");
         const formDatab = new FormData(formEle);
         let isValid;
+        setClientRegistered(0);
  
         const firstInvalidField = form.querySelector(":invalid");
         if(firstInvalidField){
@@ -195,7 +196,7 @@ const Form = ({closePopup, email}) => {
             </div>
             <form onSubmit={handleSubmit} className='ab-form' noValidate>
                 <div className="ab-form-titles">
-                    <h2 className='ab-form-title'>El Primer Paso Para Mejorar Tu Vida Financiera</h2>
+                    <h2 className='ab-form-title'>El primer paso para mejorar tu vida financiera.</h2>
                     <p className='ab-form-subtitle'>Déjanos tus datos para ser parte de los primeros usuarios.</p>
                 </div>
                 <div className="ab-input-group">

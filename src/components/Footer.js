@@ -16,6 +16,7 @@ const Footer = () => {
                         <h3>Contacto</h3>
                         <a href="mailto:cris@abunda.com.co" className='ab-footer-contact-link'>cris@abunda.com.co</a>
                     </div> */}
+                    <h3 className='title'>Escríbenos</h3>
                     <ul className='ab-footer-socials'>
                         <li>
                             <a href="https://www.instagram.com/abunda.colombia/" className='ab-footer-link' target="_blank" rel="noreferrer">
