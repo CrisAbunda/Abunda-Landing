@@ -18,7 +18,7 @@ const Form = ({closePopup, email}) => {
     const [checked4, setChecked4] = useState(false);
     const [checked5, setChecked5] = useState(false);
     const [clientRegistered, setClientRegistered] = useState({});
-
+    
     const handleCheck = e => {
         e.preventDefault();
         let element = e.target;
